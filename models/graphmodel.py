@@ -27,6 +27,9 @@ class GraphModel(torch.nn.Module):
 
         self.graph_detection_other_info_linear_1 = nn.Linear(6, self.num_cate)
         self.graph_detection_other_info_linear_2 = nn.Linear(self.num_cate, self.num_cate)
+        self.graph_detection_other_info_linear_3 = nn.Linear(self.num_cate, self.num_cate)
+        self.graph_detection_other_info_linear_4 = nn.Linear(self.num_cate, self.num_cate)
+        self.graph_detection_other_info_linear_5 = nn.Linear(self.num_cate, self.num_cate)
 
         self.embed_action = nn.Linear(action_space, 10)
 
@@ -73,6 +76,9 @@ class GraphModel(torch.nn.Module):
         target_info = F.relu(self.graph_detection_other_info_linear_1(target_info))
         target_info = target_info.t()
         target_info = F.relu(self.graph_detection_other_info_linear_2(target_info))
+        target_info = F.relu(self.graph_detection_other_info_linear_3(target_info))
+        target_info = F.relu(self.graph_detection_other_info_linear_4(target_info))
+        target_info = F.relu(self.graph_detection_other_info_linear_5(target_info))
         target_appear = torch.mm(target['appear'].t(), target_info).t()
         target = torch.cat((target_appear, target['info'], target['indicator']), dim=1)
 
