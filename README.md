@@ -31,7 +31,7 @@ Data
     ├── FloorPlan2
     └── ...
 ```
-You can download the dataset used in our paper [here](https://drive.google.com/file/d/1kvYvutjqc6SLEO65yQjo8AuU85voT5sC/view?usp=sharing) and test data [here](https://drive.google.com/file/d/1ud_2OQfFFJOufdz_KYBdgJesEGkwy7Nj/view?usp=sharing).
+You can download the dataset used in our paper [here](https://drive.google.com/file/d/1kvYvutjqc6SLEO65yQjo8AuU85voT5sC/view?usp=sharing), test data [here](https://drive.google.com/file/d/1ud_2OQfFFJOufdz_KYBdgJesEGkwy7Nj/view?usp=sharing) and RGB data [here](https://drive.google.com/file/d/1-Xyo6zQNn1I1CQ0m6DEM_ojUUx1NUU5l/view?usp=sharing).
 
 ### Training 
 
